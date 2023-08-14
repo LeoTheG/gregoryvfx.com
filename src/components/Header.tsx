@@ -1,7 +1,5 @@
 import { MenuIcon } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "components/Button";
-import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "components/Sheet";
 
 const URL_IMG_LOGO =

@@ -1,6 +1,6 @@
 // import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // import { useEffect, useState } from "react";
 const videoURL =
@@ -14,6 +14,7 @@ export const Home = () => {
     <div className="flex flex-col items-center flex-1 w-full gap-8 bg-background py-8">
       <iframe
         src={videoURL}
+        title="video"
         className="w-full h-[300px] md:h-[500px]"
         allowFullScreen
         id="video"
@@ -53,7 +54,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
           <img
             key={index}
             src={imageUrl}
-            alt={`Image ${index}`}
+            alt="demo"
             className="w-1/2 object-cover h-48 cursor-pointer"
             onClick={() => {
               navigate(`/other-works?video=${otherWorksHrefs[index]}`);

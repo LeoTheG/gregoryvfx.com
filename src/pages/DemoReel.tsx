@@ -168,7 +168,7 @@ export const DemoReel = ({ videos }: { videos: IDemoReelVideo }) => {
         });
       }
     }
-  }, [videoName]);
+  }, [videoName, videoRefs]);
 
   return (
     <div className="flex flex-col gap-8 bg-background text-foreground py-4">
@@ -192,6 +192,7 @@ export const DemoReel = ({ videos }: { videos: IDemoReelVideo }) => {
                 <iframe
                   //@ts-ignore
                   src={videoUrl}
+                  title={video.title}
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
                   className="w-full h-[300px] md:h-[500px]"
