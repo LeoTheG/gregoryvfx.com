@@ -6,7 +6,7 @@ import { About } from "pages/About";
 import { Header } from "components/Header";
 import { Home } from "pages/Home";
 import { Footer } from "components/Footer";
-import { DemoReel } from "pages/DemoReel";
+import { DemoReel, videosOtherWorks, videosPrimary } from "pages/DemoReel";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +23,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/demo-reel",
-        element: <DemoReel />,
+        element: <DemoReel videos={videosPrimary} />,
+      },
+      {
+        path: "/other-works",
+        element: <DemoReel videos={videosOtherWorks} />,
       },
     ],
   },

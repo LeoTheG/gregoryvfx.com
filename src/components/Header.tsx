@@ -30,7 +30,13 @@ export const Header = () => {
   return (
     <div className="flex items-center justify-between sm:px-8 py-4 border-b-4 bg-background">
       <div className="flex gap-4">
-        <img src={URL_IMG_LOGO} alt="logo" className="w-[100px] h-[56px]" />
+        <Link to="/">
+          <img
+            src={URL_IMG_LOGO}
+            alt="logo"
+            className="w-[100px] h-[56px] cursor-pointer"
+          />
+        </Link>
         <div className="flex flex-col gap-1 text-foreground">
           <div className="text-lg">Gregory Kalamdaryan</div>
           <div>VFX Artist</div>
