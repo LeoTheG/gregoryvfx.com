@@ -101,3 +101,16 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-80%); /* Move 5 images to the left (5 * 100%) */
+  }
+}
+
+.animate-slide {
+  animation: slide 30s linear infinite;
+}

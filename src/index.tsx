@@ -5,11 +5,12 @@ import "./index.css";
 import { About } from "pages/About";
 import { Header } from "components/Header";
 import { Home } from "pages/Home";
+import { Footer } from "components/Footer";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HeaderWrapper />,
+    element: <AppWrapper />,
     children: [
       {
         path: "/",
@@ -30,11 +31,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </React.StrictMode>,
 );
 
-function HeaderWrapper() {
+function AppWrapper() {
   return (
     <div className="flex flex-col min-h-screen dark">
       <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 }

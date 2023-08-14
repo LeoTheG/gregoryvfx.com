@@ -27,16 +27,6 @@ const routes = [
 ];
 
 export const Header = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const handleClickMobileMenu = () => {
-    setIsMobileMenuOpen(true);
-  };
-
-  const handleCloseMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
   return (
     <div className="flex items-center justify-between sm:px-8 py-4 border-b-4 bg-background">
       <div className="flex gap-4">
