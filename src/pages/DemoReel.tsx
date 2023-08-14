@@ -143,7 +143,6 @@ export const DemoReel = ({ videos }: { videos: IDemoReelVideo }) => {
   // read params from url
   const urlParams = new URLSearchParams(window.location.search);
   const videoName = urlParams.get("video");
-  console.log({ videoName });
   const [imgBreakdownStatus, setImgBreakdownStatus] = useState(
     Object.keys(videos).reduce<Record<string, boolean>>((acc, key) => {
       acc[key] = false;
@@ -184,6 +183,7 @@ export const DemoReel = ({ videos }: { videos: IDemoReelVideo }) => {
           <div
             className="flex flex-col gap-4 w-full justify-center text-center"
             ref={videoRefs[key]}
+            key={key}
           >
             <h1 className="text-2xl">{video.title}</h1>
 
