@@ -47,7 +47,7 @@ interface ImageSliderProps {
 const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
   const navigate = useNavigate();
   return (
-    <div className="flex overflow-hidden">
+    <div className="flex overflow-hidden w-full max-w-[800px]">
       <div className="flex animate-slide infinite">
         {images.map((imageUrl, index) => (
           <img

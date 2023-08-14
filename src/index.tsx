@@ -6,6 +6,7 @@ import { About } from "pages/About";
 import { Header } from "components/Header";
 import { Home } from "pages/Home";
 import { Footer } from "components/Footer";
+import { DemoReel } from "pages/DemoReel";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/demo-reel",
+        element: <DemoReel />,
       },
     ],
   },
