@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "REACT_APP_PUBLIC_URL=https://leotheg.github.io/gregoryvfx.com react-scripts build",
+    "build": "PUBLIC_URL=https://leotheg.github.io/gregoryvfx.com react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\""
