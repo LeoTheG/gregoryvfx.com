@@ -8,30 +8,41 @@ import { Home } from "pages/Home";
 import { Footer } from "components/Footer";
 import { DemoReel, videosOtherWorks, videosPrimary } from "pages/DemoReel";
 
-const router = createHashRouter([
+const routerBaseName =
+  process.env.NODE_ENV === "production"
+    ? "https://leotheg.github.io/gregoryvfx.com/"
+    : "/";
+console.log(routerBaseName);
+
+const router = createHashRouter(
+  [
+    {
+      path: "/",
+      element: <AppWrapper />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/about",
+          element: <About />,
+        },
+        {
+          path: "/demo-reel",
+          element: <DemoReel videos={videosPrimary} />,
+        },
+        {
+          path: "/other-works",
+          element: <DemoReel videos={videosOtherWorks} />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <AppWrapper />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/demo-reel",
-        element: <DemoReel videos={videosPrimary} />,
-      },
-      {
-        path: "/other-works",
-        element: <DemoReel videos={videosOtherWorks} />,
-      },
-    ],
+    basename: routerBaseName,
   },
-]);
+);
 
 //@ts-ignore
 ReactDOM.createRoot(document.getElementById("root")).render(
