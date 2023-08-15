@@ -11,13 +11,16 @@ export const About = () => {
         data={resumePdf}
         type="application/pdf"
         width="100%"
-        className="flex flex-col items-center gap-4 h-[550px] md:h-[1200px]"
+        className="hidden md:flex flex-col items-center gap-4 h-[550px] md:h-[1200px] "
       >
         <img src={resumeImg} alt="resume" />
-        <a href={resumePdf} download>
-          <Button>Download PDF</Button>
-        </a>
       </object>
+
+      <img className="flex md:hidden" src={resumeImg} alt="resume" />
+
+      <a href={resumePdf} download>
+        <Button>Download Resume</Button>
+      </a>
 
       <img alt="Gregory Kalamdaryan" src={gregPhoto} className="w-48 md:w-64" />
       <div className="text-3xl">Proficient with</div>

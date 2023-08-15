@@ -1,4 +1,5 @@
 import { createRef, useEffect, useState } from "react";
+import { useParams, useSearchParams } from "react-router-dom";
 
 export const videosPrimary: IDemoReelVideo = {
   "planetary explosion": {
@@ -140,9 +141,16 @@ export const videosOtherWorks: IDemoReelVideo = {
 };
 
 export const DemoReel = ({ videos }: { videos: IDemoReelVideo }) => {
-  // read params from url
-  const urlParams = new URLSearchParams(window.location.search);
-  const videoName = urlParams.get("video");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const videoName = searchParams.get("video");
+
+  // remove the video param from the url
+  useEffect(() => {
+    if (videoName) {
+      searchParams.delete("video");
+      setSearchParams(searchParams);
+    }
+  }, [videoName]);
   const [imgBreakdownStatus, setImgBreakdownStatus] = useState(
     Object.keys(videos).reduce<Record<string, boolean>>((acc, key) => {
       acc[key] = false;
