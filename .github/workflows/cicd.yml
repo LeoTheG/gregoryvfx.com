@@ -1,25 +1,57 @@
-name: github pages ci cd
+name: Build & deploy
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  deploy:
-    name: deploy
+  build:
+    name: Build
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Install
-        run: npm install
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13.x
 
-      - name: Configure Git Author
-        run: |
-          git config --global user.email "leonargharib@gmail.com"
-          git config --global user.name "LeoTheG"
+      - name: Install NPM packages
+        run: npm ci
 
-      - name: deploy
-        run: npm run deploy
+      - name: Build project
+        run: npm run build
+
+      # - name: Run tests
+      #   run: npm run test
+
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v2
+        with:
+          name: production-files
+          path: ./build
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: production-files
+          path: ./build
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
