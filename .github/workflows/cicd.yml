@@ -16,5 +16,10 @@ jobs:
       - name: Install
         run: npm install
 
+      - name: Configure Git Author
+        run: |
+          git config --global user.email "leonargharib@gmail.com"
+          git config --global user.name "LeoTheG"
+
       - name: deploy
         run: npm run deploy
