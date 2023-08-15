@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "https://leotheg.github.io/gregoryvfx.com/static/css/main.c24283cc.css",
+    "main.js": "https://leotheg.github.io/gregoryvfx.com/static/js/main.7972a58c.js",
+    "static/media/gregphoto.jpg": "https://leotheg.github.io/gregoryvfx.com/static/media/gregphoto.b60ebbe448419bc702a5.jpg",
+    "static/media/resume_img.png": "https://leotheg.github.io/gregoryvfx.com/static/media/resume_img.c46c1b771bc8c3596b1f.png",
+    "static/media/Greg-Resume.pdf": "https://leotheg.github.io/gregoryvfx.com/static/media/Greg-Resume.f1870114329f37a6d978.pdf",
+    "index.html": "https://leotheg.github.io/gregoryvfx.com/index.html",
+    "main.c24283cc.css.map": "https://leotheg.github.io/gregoryvfx.com/static/css/main.c24283cc.css.map",
+    "main.7972a58c.js.map": "https://leotheg.github.io/gregoryvfx.com/static/js/main.7972a58c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c24283cc.css",
+    "static/js/main.7972a58c.js"
+  ]
+}
