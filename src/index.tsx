@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { createHashRouter, Outlet, RouterProvider } from "react-router-dom";
 import "./index.css";
 import { About } from "pages/About";
 import { Header } from "components/Header";
@@ -8,7 +8,7 @@ import { Home } from "pages/Home";
 import { Footer } from "components/Footer";
 import { DemoReel, videosOtherWorks, videosPrimary } from "pages/DemoReel";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <AppWrapper />,
