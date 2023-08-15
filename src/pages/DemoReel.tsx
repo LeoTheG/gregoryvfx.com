@@ -1,5 +1,5 @@
 import { createRef, useEffect, useState } from "react";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 export const videosPrimary: IDemoReelVideo = {
   "planetary explosion": {
@@ -150,7 +150,7 @@ export const DemoReel = ({ videos }: { videos: IDemoReelVideo }) => {
       searchParams.delete("video");
       setSearchParams(searchParams);
     }
-  }, [videoName]);
+  }, [videoName, searchParams, setSearchParams]);
   const [imgBreakdownStatus, setImgBreakdownStatus] = useState(
     Object.keys(videos).reduce<Record<string, boolean>>((acc, key) => {
       acc[key] = false;
