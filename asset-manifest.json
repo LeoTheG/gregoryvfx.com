@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/gregoryvfx.com/static/css/main.c24283cc.css",
-    "main.js": "/gregoryvfx.com/static/js/main.0a03189d.js",
+    "main.js": "/gregoryvfx.com/static/js/main.22d5e8b9.js",
     "static/media/gregphoto.jpg": "/gregoryvfx.com/static/media/gregphoto.b60ebbe448419bc702a5.jpg",
     "static/media/resume_img.png": "/gregoryvfx.com/static/media/resume_img.c46c1b771bc8c3596b1f.png",
     "static/media/Greg-Resume.pdf": "/gregoryvfx.com/static/media/Greg-Resume.f1870114329f37a6d978.pdf",
     "index.html": "/gregoryvfx.com/index.html",
     "main.c24283cc.css.map": "/gregoryvfx.com/static/css/main.c24283cc.css.map",
-    "main.0a03189d.js.map": "/gregoryvfx.com/static/js/main.0a03189d.js.map"
+    "main.22d5e8b9.js.map": "/gregoryvfx.com/static/js/main.22d5e8b9.js.map"
   },
   "entrypoints": [
     "static/css/main.c24283cc.css",
-    "static/js/main.0a03189d.js"
+    "static/js/main.22d5e8b9.js"
   ]
 }
